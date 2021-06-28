@@ -1,4 +1,4 @@
-#include<iostream>
+ #include<iostream>
 using namespace std;
 
 int need[50][50];
@@ -54,7 +54,7 @@ bool isSafe(int processes[], int avail[], int maxm[][50], int allot[][50], int P
 {
     calculateNeed(need, maxm, allot, P, R);
     if (CheckNeed(need, P, R) == false) {
-        cout << "System is not in safe state.\n";
+        cout << "Input error, please check again.\n";
         return false;
     }
     else {
@@ -119,14 +119,14 @@ int main()
     cout << "The number of process: ";
     cin>>P;
     while ( P<0){
-    	cout<<"you entered wrong, please re-enter: ";
+    	cout<<"Input error, please check again: ";
     	cin>>P;
 	}
     
     cout << "The kinds number of resource: ";
     cin >> R;
     while (R<0){
-    	cout<<"you entered wrong, please re-enter: ";
+    	cout<<"Input error, please check again: ";
     	cin>>R;
 	}
     int processes[100];
@@ -154,7 +154,6 @@ int main()
         cout << "Process " << i + 1 <<": ";
         for (int j = 0; j < R; j++) {
             cin >> allot[i][j];
-            cout<<endl;
             
         }
     }
